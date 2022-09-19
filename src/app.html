@@ -1,0 +1,37 @@
+<template>
+<lightning-card title="Empresas">
+
+		<div class="slds-p-around_medium">
+	<h1> Empresa {obj.nome} </h1>
+	<ul>
+		<li> CNPJ: {obj.cnpj} </li>
+		<li> Endereço: {obj.endereco} </li>
+	</ul>
+		</div>
+
+<template if:true={visivel}> 
+		<div class="slds-p-around_medium">		
+	<ul>
+		<li> Carro: {obj.nomeProduto} </li>
+		<li> Descrição: {obj.descricao} </li>
+		<li> Valor: {obj.preco} </li>
+	</ul>
+		</div>
+</template>
+
+<template if:true={visivel}>
+		<div class="slds-p-around_medium">
+		<h1> Promoção </h1>
+	<ul>
+		<li> Promoção do dia: {obj.promo1} </li>
+		<li> Promoção novo cliente: {obj.promo1}  </li>
+	</ul>
+		</div>
+</template>
+
+<lightning-button variant="destructive" label="Clique Aqui" title="Clique Aqui" onclick={onClick} class="slds-m-left_x-small"></lightning-button>
+
+
+
+</lightning-card>
+</template>
